@@ -72,27 +72,30 @@ if(contactForm) {
                 await db.collection('messages').add({ name, email, message, timestamp: new Date() });
             }
 
-            // 2. Send email via Formsubmit (FREE - no signup needed)
-            const response = await fetch("https://formsubmit.co/ajax/hemangiramanuj03@gmail.com", {
+            // 2. Send email via Web3Forms (FREE - https://web3forms.com)
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: { 
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
                 body: JSON.stringify({
+                    access_key: "ab487a99-1d01-4dd3-98b4-50910499d7af",
                     name: name,
                     email: email,
                     message: message,
-                    _subject: "New Portfolio Message from " + name,
-                    _template: "table"
+                    subject: "New Portfolio Message from " + name,
+                    from_name: "Portfolio Contact Form"
                 })
             });
 
-            if (response.ok) {
+            const result = await response.json();
+            if (result.success) {
                 statusMessage.innerHTML = '<span class="text-success">Message sent successfully!</span>';
                 contactForm.reset();
             } else {
-                throw new Error('Failed to send');
+                console.error("Web3Forms error:", result);
+                throw new Error(result.message || 'Failed to send');
             }
         } catch (error) {
             console.error(error);
