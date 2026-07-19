@@ -1213,9 +1213,10 @@ body.dark-mode .filter-btn.active {
     .about-stat h3   { font-size: 1.6rem; }
 
     /* Skills */
-    .skill-tile h4   { font-size: 1rem; }
-    .skill-tile p    { font-size: 0.8rem; }
-    .skill-icon      { width: 44px; height: 44px; font-size: 1.2rem; }
+    .skill-tile h4   { font-size: 0.85rem; }
+    .skill-tile p    { font-size: 0.72rem; }
+    .skill-icon      { width: 36px; height: 36px; font-size: 1rem; flex-shrink: 0; }
+    .skill-tile      { padding: 14px 12px; gap: 10px; flex-direction: column; align-items: flex-start; }
 
     /* Experience / Timeline */
     .timeline-card h3    { font-size: 1.05rem; }
@@ -1233,6 +1234,28 @@ body.dark-mode .filter-btn.active {
     .cert-name           { font-size: 0.85rem; }
     .contact-info-card h3,
     .contact-form-card h3 { font-size: 1.2rem; }
+
+    /* Floating badges: show on mobile, smaller size, tighter positions */
+    .floating-badge {
+        font-size: 0.72rem !important;
+        padding: 5px 10px !important;
+        gap: 5px !important;
+    }
+    .hero-card-wrapper {
+        margin: 50px 80px !important;
+        width: 200px !important;
+        height: auto !important;
+    }
+    .hero-image-container {
+        min-height: unset !important;
+        overflow: visible !important;
+    }
+    .float-py   { top: 5%;    left: -70px;  }
+    .float-odoo { top: -28px; right: 0px;   }
+    .float-db   { bottom: 25%; left: -80px; }
+    .float-owl  { bottom: 0;   right: -52px;}
+    .float-api  { top: 40%;   right: -78px; }
+    .float-git  { bottom: -22px; left: -32px; }
 }
 
 @media (max-width: 575.98px) {
