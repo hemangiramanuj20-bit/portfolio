@@ -224,7 +224,7 @@ body.dark-mode .btn-primary-custom:hover {
 
 /* --- HERO SECTION --- */
 .hero {
-    padding: 160px 0 100px;
+    padding: 120px 0 80px;
     background: var(--hero-pattern);
     position: relative;
     overflow: visible;
@@ -303,7 +303,7 @@ body.dark-mode .btn-primary-custom:hover {
     height: 400px;
     z-index: 2;
     /* Add padding so floating badges don't get clipped */
-    margin: 40px 80px;
+    margin: 40px 80px; /* desktop only – overridden below for mobile */
 }
 
 /* Static Profile Card Styles */
@@ -965,8 +965,39 @@ body.dark-mode .filter-btn.active {
     }
 }
 @media (max-width: 767.98px) {
+    /* Show badges as a horizontal scrollable chip row under the card */
     .floating-badge {
-        display: none !important;
+        position: static !important;
+        display: inline-flex !important;
+        animation: none !important;
+        font-size: 0.75rem;
+        padding: 5px 12px;
+        margin: 4px;
+        white-space: nowrap;
+    }
+    .hero-card-wrapper {
+        margin: 10px auto !important;
+        width: 240px !important;
+        height: auto !important;
+    }
+    .hero-image-container {
+        min-height: unset !important;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* Flex-wrap badges below the card */
+    .hero-card-wrapper > .floating-badge {
+        position: static !important;
+    }
+    /* Container for badges on mobile */
+    .mobile-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px 12px;
+        max-width: 360px;
+        margin: 0 auto;
     }
 }
 @media (max-width: 575.98px) {
@@ -980,16 +1011,18 @@ body.dark-mode .filter-btn.active {
     .about-card, .contact-info-card, .contact-form-card {
         padding: 24px;
     }
+    .hero {
+        padding: 90px 0 60px;
+    }
     .hero-card-wrapper {
-        width: 260px;
-        height: 350px;
-        margin: 20px auto;
+        width: 240px !important;
+        height: auto !important;
+        margin: 8px auto !important;
     }
     .profile-card-img {
         height: 180px;
     }
     .hero-glow-shadow {
-        width: 280px;
-        height: 280px;
+        display: none;
     }
 }
