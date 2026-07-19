@@ -261,7 +261,7 @@ body.dark-mode .btn-primary-custom:hover {
     padding: 120px 0 80px;
     background: var(--hero-pattern);
     position: relative;
-    overflow: visible;
+    overflow: hidden; /* prevent badge overflow creating horizontal scroll */
 }
 
 .hero-hello {
@@ -453,37 +453,37 @@ body.dark-mode .floating-badge {
 
 .float-py {
     top: 8%;
-    left: -90px;
+    left: -85px;
     animation-delay: 0s;
 }
 
 .float-odoo {
     top: -38px;
-    right: 20px;
+    right: 10px;
     animation-delay: 0.6s;
 }
 
 .float-db {
     bottom: 28%;
-    left: -100px;
+    left: -95px;
     animation-delay: 1.2s;
 }
 
 .float-owl {
     bottom: 0;
-    right: -70px;
+    right: -60px;
     animation-delay: 1.8s;
 }
 
 .float-api {
     top: 42%;
-    right: -110px;
+    right: -95px;
     animation-delay: 0.3s;
 }
 
 .float-git {
     bottom: -30px;
-    left: -45px;
+    left: -40px;
     animation-delay: 2.4s;
 }
 
