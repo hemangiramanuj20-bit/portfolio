@@ -261,7 +261,7 @@ body.dark-mode .btn-primary-custom:hover {
     font-size: 1rem;
     line-height: 1.8;
     color: var(--text-main);
-    opacity: 0.8;
+    opacity: 0.95;
     margin-bottom: 36px;
 }
 .hero-stats {
@@ -679,7 +679,7 @@ body.dark-mode .mockup-header {
     height: 6px;
     border-radius: 50%;
     background: var(--text-muted);
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .mockup-version {
     font-size: 0.75rem;
@@ -853,7 +853,7 @@ body.dark-mode .mockup-header {
 }
 .form-control::placeholder {
     color: var(--text-muted);
-    opacity: 0.65;
+    opacity: 0.9;
 }
 .form-control:focus {
     background-color: var(--bg-card) !important;
@@ -933,6 +933,14 @@ body.dark-mode .filter-btn.active {
 
 /* --- MOBILE RESPONSIVENESS ADJUSTMENTS --- */
 @media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--bg-card);
+        border-radius: 16px;
+        padding: 16px;
+        margin-top: 16px;
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
     .hero {
         padding: 140px 0 80px;
         text-align: center;
@@ -943,6 +951,9 @@ body.dark-mode .filter-btn.active {
     .hero-image-container {
         margin-bottom: 40px;
     }
+    .hero-card-wrapper {
+        margin: 40px auto;
+    }
     .timeline::before {
         left: 10px;
     }
@@ -951,6 +962,11 @@ body.dark-mode .filter-btn.active {
     }
     .timeline-dot {
         left: 0;
+    }
+}
+@media (max-width: 767.98px) {
+    .floating-badge {
+        display: none !important;
     }
 }
 @media (max-width: 575.98px) {
@@ -964,14 +980,13 @@ body.dark-mode .filter-btn.active {
     .about-card, .contact-info-card, .contact-form-card {
         padding: 24px;
     }
-    .hero-card-container {
+    .hero-card-wrapper {
         width: 260px;
-        height: 260px;
+        height: 350px;
+        margin: 20px auto;
     }
-    .avatar-frame {
-        width: 90px;
-        height: 90px;
-        border-radius: 18px;
+    .profile-card-img {
+        height: 180px;
     }
     .hero-glow-shadow {
         width: 280px;

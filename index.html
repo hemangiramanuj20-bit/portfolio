@@ -11,7 +11,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +38,13 @@
             </a>
 
             <div class="d-flex align-items-center gap-3 order-lg-3">
-                <button id="themeToggle" class="theme-toggle" title="Switch Theme">
-                    <i class="fas fa-sun"></i>
+                <button id="themeToggle" class="theme-toggle" title="Switch Theme" aria-label="Switch Theme">
+                    <i class="fas fa-sun" aria-hidden="true"></i>
                 </button>
                 <button class="navbar-toggler border-0 shadow-none p-0" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <i class="fas fa-bars fs-3 text-main"></i>
+                    <i class="fas fa-bars fs-3 text-main" aria-hidden="true"></i>
                 </button>
             </div>
 
@@ -107,7 +109,7 @@
 
                         <div class="hero-profile-card">
                             <div class="profile-card-img overflow-hidden">
-                                <img src="profile_original.png" alt="Hemangi Ramanuj – Odoo Developer" loading="lazy"
+                                <img src="profile_original.png" alt="Hemangi Ramanuj – Odoo Developer" fetchpriority="high" width="300" height="220"
                                     style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                             </div>
                             <div class="profile-card-info text-center">
@@ -360,7 +362,6 @@
                             </div>
                         </div>
                         <h3>Incense Manufacturing ERP</h3>
-                        <p class="text-muted small mb-2"><strong>Janak Perfumers</strong></p>
                         <ul class="project-bullets">
                             <li>Full implementation across Sales, POS, Inventory, Manufacturing, and Accounting.</li>
                             <li>Built Employee Map View with GPS tracking and POS OTP verification.</li>
@@ -371,12 +372,6 @@
                             <span>OWL JS</span>
                             <span>Shopify API</span>
                             <span>E-Invoicing</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangi2003" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -396,7 +391,6 @@
                             </div>
                         </div>
                         <h3>Heavy Machinery ERP</h3>
-                        <p class="text-muted small mb-2"><strong>Innovative</strong></p>
                         <ul class="project-bullets">
                             <li>Scaled HR, Accounting, CRM, and Documents (Kanban, hierarchical files).</li>
                             <li>Developed custom Daily Call Report (DCR) linked to CRM.</li>
@@ -407,12 +401,6 @@
                             <span>Payroll</span>
                             <span>CRM API</span>
                             <span>Odoo v19</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -432,7 +420,6 @@
                             </div>
                         </div>
                         <h3>General Products Trading ERP</h3>
-                        <p class="text-muted small mb-2"><strong>Gayatri Sales</strong></p>
                         <ul class="project-bullets">
                             <li>Led database migration, resolving relational mapping errors.</li>
                             <li>Optimized inventory workflows with serial/lot tracking and discount logic.</li>
@@ -443,12 +430,6 @@
                             <span>QWeb Reports</span>
                             <span>Migration</span>
                             <span>Odoo ORM</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -468,7 +449,6 @@
                             </div>
                         </div>
                         <h3>Compliance & AI Document Parsing</h3>
-                        <p class="text-muted small mb-2"><strong>Multi-Industry</strong></p>
                         <ul class="project-bullets">
                             <li>Developed government-compliant E-Invoicing & E-Way Bill JSON payloads.</li>
                             <li>Integrated AI document parsers (Eden AI, Mindee OCR) for automation.</li>
@@ -479,12 +459,6 @@
                             <span>OCR AI</span>
                             <span>Shopify Sync</span>
                             <span>Odoo Apps</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -504,7 +478,6 @@
                             </div>
                         </div>
                         <h3>Footwear Retail & Logistics</h3>
-                        <p class="text-muted small mb-2"><strong>Chakhdi Shoes</strong></p>
                         <ul class="project-bullets">
                             <li>Migrated Inventory, Sales, and POS systems with database sanitization.</li>
                             <li>Re-engineered GST/Tax calculation engines for dynamic pricing.</li>
@@ -515,12 +488,6 @@
                             <span>Shiprocket</span>
                             <span>Tax Engine</span>
                             <span>POS Layouts</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -540,7 +507,6 @@
                             </div>
                         </div>
                         <h3>Trading & Distribution ERP</h3>
-                        <p class="text-muted small mb-2"><strong>Trading & Distribution</strong></p>
                         <ul class="project-bullets">
                             <li>Handled full-stack migration across Sales, Purchase, HR, and Accounting.</li>
                             <li>Debugged database upgrade failures and deprecated method errors.</li>
@@ -551,12 +517,6 @@
                             <span>SQL Tuning</span>
                             <span>UI Refinement</span>
                             <span>Odoo ORM</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -576,7 +536,6 @@
                             </div>
                         </div>
                         <h3>Restaurant & Cafe POS</h3>
-                        <p class="text-muted small mb-2"><strong>Werafoods POS Enhancements</strong></p>
                         <ul class="project-bullets">
                             <li>Optimized restaurant workflows, KOT printing, and combo products.</li>
                             <li>Developed JS patches for category color coding and menu syncing.</li>
@@ -586,12 +545,6 @@
                             <span>OWL JS Patches</span>
                             <span>Werafoods API</span>
                             <span>POS Restaurant</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -611,7 +564,6 @@
                             </div>
                         </div>
                         <h3>POS & Financial Auditing</h3>
-                        <p class="text-muted small mb-2"><strong>Zurich India Enhancements</strong></p>
                         <ul class="project-bullets">
                             <li>Resolved P&L and Balance Sheet discrepancies by auditing journal entries.</li>
                             <li>Customized POS order lines and receipt sequencing logic.</li>
@@ -622,12 +574,6 @@
                             <span>Financial Mapping</span>
                             <span>Sequencing</span>
                             <span>PostgreSQL</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -647,7 +593,6 @@
                             </div>
                         </div>
                         <h3>SecurPharm Pharmaceutical Integration</h3>
-                        <p class="text-muted small mb-2"><strong>Pharmacy & Pharmaceutical</strong></p>
                         <ul class="project-bullets">
                             <li>Built SecurPharm compliance and DM code verification.</li>
                             <li>Added lot, serial, and expiry data traceability rules.</li>
@@ -657,12 +602,6 @@
                             <span>SecurPharm API</span>
                             <span>Compliance</span>
                             <span>Traceability</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -682,7 +621,6 @@
                             </div>
                         </div>
                         <h3>Mining Industry ERP Configuration</h3>
-                        <p class="text-muted small mb-2"><strong>Mining & Minerals</strong></p>
                         <ul class="project-bullets">
                             <li>Configured complex multi-tier payroll salary structures and rules.</li>
                             <li>Analyzed CRM lead generation workflows and triggers.</li>
@@ -692,12 +630,6 @@
                             <span>Payroll Rules</span>
                             <span>CRM Leads</span>
                             <span>API Logs</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -717,7 +649,6 @@
                             </div>
                         </div>
                         <h3>Government E-Invoice Automation</h3>
-                        <p class="text-muted small mb-2"><strong>Manufacturing & Trading</strong></p>
                         <ul class="project-bullets">
                             <li>Resolved complex address-mapping in JSON payloads.</li>
                             <li>Programmed scheduled actions for automated token refreshes.</li>
@@ -727,12 +658,6 @@
                             <span>Scheduled Actions</span>
                             <span>JSON Mapping</span>
                             <span>Compliance Reports</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -752,7 +677,6 @@
                             </div>
                         </div>
                         <h3>Hospitality VoIP & PO Automation</h3>
-                        <p class="text-muted small mb-2"><strong>Guestify ERP / Hospitality</strong></p>
                         <ul class="project-bullets">
                             <li>Customized VoIP softphones with a Favorite Contacts feature.</li>
                             <li>Automated PO email workflows with dynamic CC recipients.</li>
@@ -762,12 +686,6 @@
                             <span>VoIP Integration</span>
                             <span>Email triggers</span>
                             <span>OWL JS</span>
-                        </div>
-                        <div class="project-links mt-3 d-flex gap-3 pt-3 border-top-dash">
-                            <a href="https://github.com/hemangiramanuj" target="_blank" class="project-link-btn"><i
-                                    class="fab fa-github me-1"></i> Code</a>
-                            <span class="project-link-btn" style="opacity:0.5;cursor:default;"
-                                title="Private client project"><i class="fas fa-lock me-1"></i> Private</span>
                         </div>
                     </div>
                 </div>
@@ -817,20 +735,20 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <input type="text" id="name" class="form-control" placeholder="Your Name"
-                                            required>
+                                            required aria-label="Your Name">
                                     </div>
                                     <div class="col-md-6">
                                         <input type="email" id="email" class="form-control" placeholder="Your Email"
-                                            required>
+                                            required aria-label="Your Email">
                                     </div>
                                     <div class="col-12">
                                         <textarea id="message" rows="5" class="form-control"
-                                            placeholder="Tell me about your Odoo project..." required></textarea>
+                                            placeholder="Tell me about your Odoo project..." required aria-label="Message"></textarea>
                                     </div>
                                     <div class="col-12">
                                         <button type="submit"
                                             class="btn-custom btn-primary-custom w-100 justify-content-center">
-                                            <i class="fas fa-paper-plane"></i> Send Message
+                                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
                                         </button>
                                     </div>
                                 </div>
@@ -848,25 +766,24 @@
     <footer class="py-5">
         <div class="container text-center">
             <div class="footer-social-links d-flex justify-content-center gap-4 mb-4">
-                <a href="https://github.com/hemangi2003" target="_blank" title="GitHub"><i
-                        class="fab fa-github fs-4"></i></a>
-                <a href="https://linkedin.com/in/hemangi-ramanuj" target="_blank" title="LinkedIn"><i
-                        class="fab fa-linkedin fs-4"></i></a>
-                <a href="mailto:hemangiramanuj03@gmail.com" title="Email"><i class="fas fa-envelope fs-4"></i></a>
-                <a href="Resume_Hemangi_Ramanuj.pdf" download title="Download Resume"><i
-                        class="fas fa-file-pdf fs-4"></i></a>
+                <a href="https://github.com/hemangi2003" target="_blank" title="GitHub" aria-label="GitHub Profile"><i
+                        class="fab fa-github fs-4" aria-hidden="true"></i></a>
+                <a href="https://linkedin.com/in/hemangi-ramanuj" target="_blank" title="LinkedIn" aria-label="LinkedIn Profile"><i
+                        class="fab fa-linkedin fs-4" aria-hidden="true"></i></a>
+                <a href="mailto:hemangiramanuj03@gmail.com" title="Email" aria-label="Send Email"><i class="fas fa-envelope fs-4" aria-hidden="true"></i></a>
+                
             </div>
             <p class="mb-2 text-muted">&copy; 2026 Hemangi Ramanuj. All rights reserved.</p>
-            <p class="small text-muted opacity-75">Odoo Developer & ERP Solution Builder • Rajkot, Gujarat, India</p>
+            <p class="small text-muted ">Odoo Developer & ERP Solution Builder • Rajkot, Gujarat, India</p>
         </div>
     </footer>
 
     <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <!-- Firebase Compat SDKs (to support file:/// protocol without CORS issues) -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
